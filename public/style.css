@@ -1,0 +1,868 @@
+			[ng:\:cloak],[ng-cloak],.ng-cloak {
+				display:none;
+			}
+			body{
+				background-color:lightgrey;
+			}
+			#bodycontentctr{
+				padding-top: 200px;
+			}
+			.hoveroverit:hover{
+				cursor: pointer;
+			}
+
+
+
+
+
+
+/*-----------------NAVIGATION BAR MODULE-----------------*/
+
+			.navbar-fixed-top{
+				background-color: lightgrey;
+			}
+			.uppernav{
+				padding:10px 5px 5px 10px;
+				margin-bottom: 0 !important;
+				background-color:lightgrey;
+			}
+
+			.uppernav a{
+				color:black;
+				font-size:17px;
+				margin-left:20px;
+			}
+
+			.uppernav a:hover{
+				color:red;
+				font-weight:bold;
+				cursor:pointer;
+				text-decoration:none;
+			}
+
+			.redbottomnavctr{
+				background-color:red
+			}
+
+			.redbottomnavctr .redbottomnav{
+				padding:10px 5px;
+			}
+			.redbottomnavctr .redbottomnav .musiclogo{
+				color:white;
+				font-size:50px;
+				font-weight:bold;
+
+			}
+
+			.redbottomnavctr .redbottomnav .musiclogo:hover{
+				cursor:pointer;
+			}
+
+
+			.redbottomnavctr .redbottomnav .searcharea #navsearch{
+				width: 100%;
+				height: 30px;
+				min-width: 240px;
+				max-width: 300px;
+				margin-top: 20px;
+				background-image: url(./search.png);
+				background-repeat: no-repeat;
+				background-position: right;
+				background-size: 20px 20px;
+				background-color: white;
+			}
+
+			.redbottomnavctr .redbottomnav .searcharea .searchdropdown{
+				width: 100%;
+				max-height: 400px;
+				min-width: 240px;
+				max-width: 300px;
+				border: 1px solid black;
+				overflow-y: scroll;
+				padding:2px;
+				background-color: white;
+				position: absolute;
+				z-index: 4;
+			}
+
+			.redbottomnavctr .redbottomnav .searcharea .searchdropdown li{
+				list-style: none;
+				height: 100px;
+				border-bottom: 1px solid black;
+				min-width: 240px;
+			}
+
+			.redbottomnavctr .redbottomnav .searcharea .searchdropdown li img{
+				height:80px;
+				width:80px;
+				margin:10px;
+				position:relative;
+				float:left;
+			}
+			.redbottomnavctr .redbottomnav .searcharea .searchdropdown li div{
+				overflow:auto;
+
+		    margin: 10px 5px;
+		    height: 80px;
+		    width: 140px;
+			}
+
+			.redbottomnavctr .redbottomnav .searcharea .searchdropdown li div h4{
+				margin:0;
+				font-weight: bold;
+				font-size: 14px;
+			}
+
+			.redbottomnavctr .redbottomnav .searcharea .searchdropdown li div h6{
+				font-size: 12px;
+				margin:8px 0 0 0;
+			}
+
+			.redbottomnavctr .redbottomnav .navcartarea span{
+				position:relative;
+				float:left;
+				width:80px;
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+
+			.redbottomnavctr .redbottomnav .navcartarea .navcartlogo{
+				position: relative;
+				float: left;
+				background-image: url(./sprites.png);
+				background-repeat: no-repeat;
+				background-position: -180px -142px;
+	 			background-size: 225px 211px;
+				width: 54px;
+				height: 54px;
+				color:white;
+				padding:9px 13px;
+				font-size:18px;
+				font-weight:bold;
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+
+
+
+
+
+
+
+/*----------------ALBUM BANNER (BELOW THE NAV BAR)-----------------*/
+
+			.homepage .homepagebanner > *{
+				position: relative;
+				padding: 0;
+			}
+
+			.homepage .homepagebanner .col-sm-4 .eachsmallbanner{
+				position: relative;
+				float:left;
+				width:50%;
+			}
+			.homepage .homepagebanner .col-sm-4 img{
+				width:100%;
+			}
+
+			.homepage .homepagebanner .col-sm-4 .albumimgtextarea{
+				position: absolute;
+				top: 75%;
+				height: 25%;
+				background-color: black;
+				opacity: 0.7;
+				width: 100%;
+			}
+			@media (min-width: 766px){
+				.homepage .homepagebanner .col-sm-4 .eachsmallbanner .albumimgtextarea h4{
+					color: white;
+					font-size: 1.5vw;
+					margin-bottom: 2px;
+				}
+				.homepage .homepagebanner .col-sm-4 .eachsmallbanner .albumimgtextarea h5{
+					color: red;
+					font-size: 1.3vw;
+					margin-top: 2px;
+				}
+				.homepage .homepagebanner .bannerlarge .albumimgtextarea h4{
+					color: white;
+					font-size: 3.2vw;
+				}
+				.homepage .homepagebanner .bannerlarge .albumimgtextarea h5{
+					color: red;
+					font-size: 2.3vw;
+				}
+			}
+			@media  (max-width: 765px) {
+				.homepage .homepagebanner .col-sm-4 .eachsmallbanner .albumimgtextarea h4{
+					color: white;
+					font-size: 4.5vw;
+					margin-bottom: 2px;
+				}
+				.homepage .homepagebanner .col-sm-4 .eachsmallbanner .albumimgtextarea h5{
+					color: red;
+					font-size: 3.5vw;
+					margin-top: 2px;
+				}
+				.homepage .homepagebanner .bannerlarge .albumimgtextarea h4{
+					color: white;
+					font-size: 9vw;
+				}
+				.homepage .homepagebanner .bannerlarge .albumimgtextarea h5{
+					color: red;
+					font-size: 7vw;
+				}
+			}
+
+			.zoombox{
+			  overflow: hidden;
+			}
+			.zoombox img{
+			  -moz-transition: all 0.3s;
+			  -webkit-transition: all 0.3s;
+			  transition: all 0.3s;
+			}
+			.zoombox:hover img{
+			  -moz-transform: scale(1.1);
+			  -webkit-transform: scale(1.1);
+			  transform: scale(1.1);
+			}
+
+
+
+/*-----------------THE ITEM PATH MODULE-----------------*/
+			.homepagetop .pathbox{
+				width: 95vw;
+				margin-left: 44px;
+				margin-top: 47px;
+				margin-bottom: 15px;
+				padding: 5px 10px;
+				background-color: white;
+			}
+
+
+
+
+
+
+
+
+/*-----------------COLUMN WITH CATEGORIES OF ALBUMS AND CART-----------------*/
+
+			.homepage .homepagelower .categoriescolumn{
+				padding:20px 5px;
+			}
+			.homepage .homepagelower .categoriescolumn > ul{
+				max-width: 430px;
+			}
+			.homepage .homepagelower .categoriescolumn > ul li {
+				list-style: none;
+				background-color: red;
+				color:white;
+				border-bottom: 1px solid lightgrey;
+				font-size: 20px;
+				padding: 4px;
+			}
+
+			.homepage .homepagelower .categoriescolumn > ul li:hover{
+				background-color: black;
+				border-bottom: 2px solid lightgrey;
+				cursor: pointer;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart{
+				margin:20px 5px 20px 40px;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .cartmessage{
+				font-size:12px;
+				margin-bottom: 15px;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart .cartsubtotal{
+				border-top: 2px solid black;
+				padding-top: 13px;
+				padding-bottom: 20px;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart .chkoutbutton{
+				color:white;
+				background-color: black;
+				padding: 8px 13px;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart > h4{
+				border-top: 2px solid black;
+				padding: 15px 0 0 0;
+				margin-top: 15px;
+				font-size: 14px;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart ul{
+				padding:0;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart ul li{
+				list-style: none;
+				width:100%;
+				padding: 30px 0 20px 0;
+				border-bottom: 2px solid black;
+
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart ul li .deleteicon{
+				position: relative;
+				float: right;
+				top: -18px;
+				font-size: 17px;
+				width: 19px;
+				text-align: center;
+				font-weight: bold;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart ul li img{
+				width:33%;
+				margin-right: 3%;
+				position:relative;
+				float:left;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart .restofcart ul li p{
+				width:60%;
+				position:relative;
+				float:left;
+			}
+
+			.homepage .homepagelower .categoriescolumn  .mycart > h3{
+				background-color: white;
+				font-size: 18px;
+				padding:5px;
+				margin:20px 0 20px 0;
+			}
+
+
+
+
+
+/*-----------------LIST OF ALBUMS MODULE-----------------*/
+
+			.homepage .homepagelower .albumsalescolumn{
+				margin-right: 1%;
+				width:74%;
+			}
+			.albumsalescolumn .eachsmallbanner{
+				position:relative;
+				float:left;
+				width:30%;
+				min-width: 210px;
+				margin-left:3%;
+				margin-top:4%;
+			}
+			.albumsalescolumn .eachsmallbanner img{
+				width:100%;
+			}
+
+			.albumsalescolumn > div > h2{
+				background-color: white;
+				margin-left: 3%;
+				margin-right:1%;
+				padding: 5px;
+				font-size: 18px;
+			}
+
+			.albumsalescolumn > div > h4{
+				margin-left: 5%;
+				margin-right:1%;
+				padding: 5px;
+				font-size: 13px;
+			}
+
+			.albumsalescolumn .eachsmallbanner .albumimgtextarea{
+				position: absolute;
+				top: 75%;
+				height: 25%;
+				background-color: black;
+				opacity: 0.9;
+				width: 100%;
+			}
+
+			.albumsalescolumn .eachsmallbanner .albumimgtextarea h4{
+				color: white;
+		    font-size: 17px;
+		    height: 30%;
+		    overflow: hidden;
+		    margin-bottom: 2%;
+			}
+
+			.albumsalescolumn .eachsmallbanner p{
+				color:white;
+				opacity:0.5;
+			}
+
+			.albumsalescolumn .eachsmallbanner p .carticon{
+				background-image: url("./sprites.png");
+				 background-position: 0 -3px;
+				 background-repeat: no-repeat;
+				 background-size: 51px 35px;
+				 float: right;
+				 height: 18px;
+				 opacity: 0.8;
+				 position: relative;
+				 right: 5px;
+				 top: 0px;
+				 width: 23px;
+			}
+
+			.albumsalescolumn .eachsmallbanner p .carticon:hover{
+				cursor: pointer;
+				opacity: 1;
+			}
+
+			.albumsalescolumn .eachsmallbanner p .infoicon{
+				background-image: url("./sprites.png");
+				background-position: -20px 0;
+				background-repeat: no-repeat;
+				background-size: 45px 29px;
+				float: right;
+				height: 18px;
+				margin-right: 3px;
+				opacity: 0.8;
+				position: relative;
+				right: 5px;
+				top: 0px;
+				width: 23px;
+			}
+
+			.albumsalescolumn .eachsmallbanner p .infoicon:hover{
+				cursor: pointer;
+				opacity: 1;
+			}
+
+			.albumsalescolumn .eachsmallbanner p .removewish{
+				color:orange;
+			}
+
+			.albumsalescolumn .eachsmallbanner p .removewish:hover{
+				cursor:pointer;
+				color:red;
+			}
+
+
+
+
+/*-----------------ALBUM INFO PAGE-----------------*/
+
+			.homepagelower .albumsalescolumn .albuminfodisplay{
+			  margin-top: 20px;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfopic{
+				width:40%;
+				position:relative;
+				float:left;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral{
+				width:57%;
+				margin-left: 2%;
+				position:relative;
+				float:left;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfostock{
+
+				border-bottom: 1px solid black;
+				padding-bottom: 5px;
+				margin-bottom: 5px;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoprice{
+				font-size: 20px;
+				color:red;
+				margin: 20px 0;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart{
+				padding: 15px;
+				border: 1px solid black;
+				background-color: white;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albinfototalprice{
+				color: red;
+				font-size: 15px;
+				padding-bottom: 15px;
+				border-bottom: 1px solid black;
+			}
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albinfoadd{
+
+				padding: 15px 0;
+				border-bottom: 1px solid grey;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albinfoadd span input{
+				width:80px;
+				font-size: 18px;
+				padding: 10px 15px;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albinfoadd > input{
+				position: relative;
+				float:right;
+				padding: 12px;
+				width:100px;
+				background-color: black;
+				color: white;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albwishlist{
+				padding-top: 15px;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albwishlist .heartlogofilled:hover,.heartlogo{
+				background-image: url("./sprites.png");
+				background-position: -24px -57px;
+				background-repeat: no-repeat;
+				background-size: 104px 86px;
+				float: left;
+				height: 28px;
+				position: relative;
+				width: 24px;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albwishlist .heartlogo:hover,.heartlogofilled{
+				background-image: url("./sprites.png");
+				background-repeat: no-repeat;
+				background-size: 104px 86px;
+				float: left;
+				height: 28px;
+				position: relative;
+				width: 24px;
+				background-position: 0 -56px;
+				cursor:pointer;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaytop .albinfogeneral .albinfoaddtocart .albwishlist .addtowishmsg{
+				position: relative;
+				float: left;
+				margin-left: 15px;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaybottom h3{
+				width:99%;
+				padding: 5px 10px;
+				background-color: white;
+				font-size: 18px;
+				background-color: white;
+			}
+
+			.homepagelower .albumsalescolumn .albuminfodisplay .albuminfodisplaybottom p{
+				width:99%;
+			}
+
+
+
+
+
+/*--------------LOGIN PAGE------------------*/
+
+			.loginpage{
+				padding: 25px;
+			}
+
+			.loginpage .loginpagetitle{
+				background-color: white;
+				font-size: 20px;
+				padding: 10px;
+				margin:0 1%;
+			}
+
+			.loginpage .newcustbox{
+				background-color: white;
+				margin: 25px 1%;
+				width: 48%;
+				min-width: 200px;
+				padding:15px;
+			}
+
+			.loginpage .newcustbox > h5{
+				padding-bottom: 15px;
+			}
+
+			.loginpage .newcustbox > p{
+				padding-top: 20px;
+				border-top: 1px solid black;
+			}
+
+			.loginpage .newcustbox > input{
+				margin-top: 20px;
+				padding: 10px;
+				background-color: black;
+				color:white;
+			}
+
+			.loginpage .regcustbox{
+				background-color: white;
+				width:48%;
+				min-width: 200px;
+				margin: 25px 1%;
+				padding:15px;
+			}
+
+			.loginpage .regcustbox > h5{
+				padding-bottom: 15px;
+			}
+
+			.loginpage .regcustbox > h6{
+				padding-top: 20px;
+				border-top: 1px solid black;
+				padding-bottom: 10px;
+			}
+
+			.loginpage .regcustbox > input{
+				display:block;
+				margin-bottom: 15px;
+			}
+			.loginpage .regcustbox > div{
+				margin-top: 15px;
+			}
+			.loginpage .regcustbox > div > input{
+				margin-top: 10px;
+				padding: 10px;
+				background-color: black;
+				color:white;
+			}
+
+			.loginpage .regcustbox > div > span{
+				position:relative;
+				float: right;
+				font-size: 12px;
+			}
+
+
+			/*----------------MODAL AT LOGIN---------------*/
+
+			#registermodal{
+				width:40%;
+				min-width:300px;
+				height:80%;
+				margin:66px auto;
+				overflow: auto;
+			}
+			#registermodal .modal-header h4{
+				text-align: center;
+			}
+			#registermodal .modal-body h5{
+				font-weight: bold;
+				margin:10px 2% 0px 2%;
+				width:96%;
+			}
+
+			#registermodal .modal-body h5:nth-of-type(2){
+				margin-top: 30px;
+			}
+
+			#registermodal .modal-body h6{
+				margin-top:0;
+				margin:2px 2% 5px 2%;
+				width:96%;
+				color: red;
+			}
+
+			#registermodal .modal-body input{
+				margin:10px 2% 0px 2%;
+				width:96%;
+				padding: 5px 10px;
+			}
+
+			#registermodal .modal-body input:last-of-type{
+				background-color: black;
+				color: white;
+				padding: 10px 10px;
+			}
+
+
+			/*---LOADING ANIM AT LOGIN---*/
+
+			.loading {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+				z-index:2000;
+			}
+			.loading-bar {
+			  display: inline-block;
+			  width: 8px;
+			  height: 36px;
+			  border-radius: 8px;
+			  animation: loading 1s ease-in-out infinite;
+			}
+			.loading-bar:nth-child(1) {
+			  background-color: #3498db;
+			  animation-delay: 0;
+			}
+			.loading-bar:nth-child(2) {
+			  background-color: #c0392b;
+			  animation-delay: 0.09s;
+			}
+			.loading-bar:nth-child(3) {
+			  background-color: #f1c40f;
+			  animation-delay: .18s;
+			}
+			.loading-bar:nth-child(4) {
+			  background-color: #27ae60;
+			  animation-delay: .27s;
+			}
+
+			@keyframes loading {
+			  0% {
+			    transform: scale(1);
+			  }
+			  20% {
+			    transform: scale(1, 2.2);
+			  }
+			  40% {
+			    transform: scale(1);
+			  }
+			}
+
+
+
+
+
+
+
+
+/*--------------CHECKOUT PAGE-----------*/
+			.checkoutpage .col-sm-9{
+				padding: 30px 1% 0 3%;
+			}
+
+			input.inputerror,select.inputerror{
+				border: 2px dashed red;
+			}
+
+			.checkoutpage .col-sm-9 > h4{
+				background-color: white;
+				padding:10px;
+			}
+			.checkoutpage .col-sm-9 > h5{
+				background-color: #2b2b2b;
+				padding:5px;
+				color: white;
+			}
+
+			.checkoutpage .col-sm-9 > h5 > div{
+				background-color: red;
+				padding:5px 10px;
+				border-radius: 50%;
+				color: white;
+				position:relative;
+				float:left;
+				font-weight: bold;
+				font-size: 22px;
+			}
+			.checkoutpage .col-sm-9 > h5 > span{
+				padding:10px;
+				color: white;
+				position:relative;
+				float:left;
+				margin-left: 10px;
+			}
+
+			.checkoutpage .col-sm-9 .bilinfo,.payinfo,.oreview{
+				padding:10px 5px;
+				border: 1px solid black;
+			}
+			.checkoutpage .col-sm-9 .bilinfo > div{
+				margin-bottom: 15px;
+				font-size: 13px;
+				font-weight: bold;
+			}
+			.checkoutpage .col-sm-9 .bilinfo > div input{
+				width:82%;
+				font-size: 15px;
+				font-weight: normal;
+				padding:4px;
+			}
+			.checkoutpage .col-sm-9 .bilinfo .bilcity{
+				width:40%;
+				position:relative;
+				float:left;
+			}
+			.checkoutpage .col-sm-9 .bilinfo .bilcity > input{
+				width:100%;
+			}
+
+			.checkoutpage .col-sm-9 .bilinfo .bilzip{
+				width:40%;
+				margin-left: 2%;
+				position:relative;
+				float:left;
+			}
+
+			.checkoutpage .col-sm-9 .bilinfo .bilzip > input{
+				width:100%;
+			}
+
+			.checkoutpage .col-sm-9 .payinfo .creditcardinfo h6{
+				margin:15px 0 3px 0;
+				font-weight: bold;
+			}
+
+			.checkoutpage .col-sm-9 .payinfo .creditcardinfo{
+				padding:15px 0 0 20px;
+			}
+
+			.checkoutpage .col-sm-9 .payinfo .creditcardinfo .cvv{
+				width:40px;
+			}
+			.checkoutpage .col-sm-9 .oreview .placeorderbox{
+				margin-top: 15px;
+			}
+			.checkoutpage .col-sm-9 .oreview .placeorderbox span a{
+				margin-left: 10px;
+				color:black;
+				text-decoration: underline;
+			}
+			.checkoutpage .col-sm-9 .oreview table tr th,td{
+				padding:8px;
+				text-align: center;
+				border:1px solid grey;
+			}
+
+			.checkoutpage .col-sm-9 .oreview table tr .totalfield{
+				text-align: right;
+			}
+			.checkoutpage .col-sm-9 .continuebut{
+				background-color: black;
+				color:white;
+				padding:10px;
+				position: relative;
+				float: right;
+			}
+
+			.checkoutpage .col-sm-3{
+				min-width: 215px;
+				padding: 30px 3% 0 1%;
+			}
+			.checkoutpage .col-sm-3 > h4{
+				background-color: white;
+				padding:10px;
+			}
+			.checkoutpage .col-sm-3 > h5{
+				padding:10px;
+				background-color: grey;
+				color: white;
+				margin-top: 15px;
+			}
+			.checkoutpage .col-sm-3 > h5 > a{
+				position: relative;
+				float: right;
+				text-decoration: underline;
+				color: white;
+			}
+			.checkoutpage .col-sm-3 > p{
+				padding: 15px 10px;
+				border: 1px solid black;
+			}

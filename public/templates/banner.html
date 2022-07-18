@@ -1,0 +1,36 @@
+
+  <div class="row homepagebanner ">
+
+<!-- LARGE PIC  -->
+    <div ng-repeat="i in albumdata | limitTo:1:0" class="bannerlarge col-sm-4 zoombox">
+      <img class="hoveroverit" ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" ng-src="{{i.image}}">
+        <div class="albumimgtextarea">
+          <h4>{{i.name}}</h4>
+          <h5>{{i.artist}}</h5>
+        </div>
+    </div>
+
+<!-- SMALL PICS  -->
+    <div class="col-sm-4">
+
+      <div ng-repeat="i in albumdata | limitTo:4:1" class="eachsmallbanner  zoombox">
+        <img  class="hoveroverit" ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" ng-src="{{i.image}}">
+        <div class="albumimgtextarea">
+          <h4>{{i.name}}</h4>
+          <h5>{{i.artist}}</h5>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-sm-4">
+      <div ng-repeat="i in albumdata | limitTo:4:5" class="eachsmallbanner  zoombox">
+        <img  class="hoveroverit" ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" ng-src="{{i.image}}">
+        <div class="albumimgtextarea">
+          <h4>{{i.name}}</h4>
+          <h5>{{i.artist}}</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>

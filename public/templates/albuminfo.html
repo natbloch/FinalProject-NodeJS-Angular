@@ -1,0 +1,26 @@
+<div class="albuminfodisplay">
+  <div class="albuminfodisplaytop clearfix">
+    <img class="albinfopic" ng-src="{{getalbuminfo.image}}">
+    <div class="albinfogeneral">
+      <h4 class="albinfoname">{{getalbuminfo.name}} ({{getalbuminfo.year}})</h4>
+      <h6 class="albinfostock">Availability: <span ng-show="getalbuminfo.availability < 1">Out of</span><b ng-show="getalbuminfo.availability > 0">In</b> <b>stock</b></h6>
+      <h6 class="albinfostocknmbr"><b ng-show="getalbuminfo.availability > 0">Only {{getalbuminfo.availability}}</b><b ng-show="getalbuminfo.availability < 1">None</b> left</h6>
+      <h5 class="albinfoprice">${{getalbuminfo.price}}</h5>
+      <p class="albinfodescription">{{getalbuminfo.description}}</p>
+      <div class="albinfoaddtocart">
+        <h5 class="albinfototalprice">Total: $<span>{{getalbuminfo.price * qtytoorder}}</span></h5>
+        <div class="albinfoadd clearfix">
+          <span>Qty: <input type="number" min="0" step="1" ng-init="qtytoorder = 0" ng-model="qtytoorder"></span> <input type="button" ng-click="addtocart()"value="Add to cart">
+        </div>
+        <div class="albwishlist clearfix">
+          <div ng-class="heartlogo" ng-click="addtowishlist()"></div><span class="addtowishmsg">Add to Wishlist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="albuminfodisplaybottom">
+    <h3>Details</h3>
+    <p> {{getalbuminfo.details}}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="albumsalescolumn col-sm-10 col-sm-offset-1">
+  <div class="albumslistdisplay">
+    <h2>Your Wish List :  {{wishlistqty}} item(s)</h2>
+
+    <!-- LIST OF THE WISHLIST  -->    
+    <div ng-show="wishdata.length != 0 && wishdata != null" ng-repeat="i in wishdata" class="eachsmallbanner">
+      <img class="hoveroverit" ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" ng-src="{{i.image}}">
+      <div class="albumimgtextarea">
+        <h4>{{i.artist}} - {{i.name}}</h4>
+        <p>${{i.price}} <a ng-click='removefromwish(i._id)' class="hoveroverit removewish">Remove From Wishlist</a> <span class="carticon" ng-click="addonetocart(i)"></span><span ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" class="infoicon"></span></p>
+      </div>
+    </div>
+    <h4 ng-show="wishdata == 0 || wishdata == null">Your wish list is empty...</h4>
+  </div>
+</div>

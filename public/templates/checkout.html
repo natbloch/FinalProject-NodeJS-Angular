@@ -1,0 +1,93 @@
+<div class="checkoutpage row">
+  <div class="col-sm-9">
+    <h4>Checkout</h4>
+
+    <!-- FIRST STEP BILING INFO  -->
+    <h5 class="clearfix"><div class="checkstep">1</div><span>Biling Information</span></h5>
+    <div class="bilinfo clearfix" ng-show="checkoutpage == 1">
+      <div>Address* <br> <input type="text" ng-class="checkouterror.biladdress" ng-model="orderdata.biladdress" value=""></div>
+      <div class="clearfix">
+        <div class="bilcity">City* <br><input type="text" ng-class="checkouterror.bilcity" ng-model="orderdata.bilcity" value=""></div>
+        <div class="bilzip">Zip / Postal Code* <br><input ng-class="checkouterror.bilzip" type="text" ng-model="orderdata.bilzip" value=""></div>
+      </div>
+      <div>Telephone* <br> <input type="text" ng-class="checkouterror.bilphone" ng-model="orderdata.bilphone" value=""></div>
+      <div class=""><span>*Required Fields</span> </div>
+      <input type="button" class="continuebut" ng-click="continuestep1()" value="Continue">
+    </div>
+
+    <!-- SECOND STEP PAYMENT INFO  -->
+    <h5 class="clearfix"><div class="checkstep">2</div><span>Payment Information</span></h5>
+    <div class="payinfo clearfix" ng-show="checkoutpage == 2">
+      <form action="" >
+        <input type="radio" ng-model="orderdata.bilpayment" name="payment" value="checkormoneyorder" checked="checked"> Check / Money order<br>
+        <input type="radio" ng-model="orderdata.bilpayment" name="payment" value="creditcard"> Credit Card<br>
+        <div class="creditcardinfo" ng-show="orderdata.bilpayment == 'creditcard'">
+          <h6>Name on Card*</h6>
+          <input type="text" ng-class="checkouterror.bilnameoncard" ng-model="orderdata.bilnameoncard" value="">
+          <h6>Credit Card Type*</h6>
+          <select  ng-class="checkouterror.bilcreditcardtype" ng-model="orderdata.bilcreditcardtype" value="">
+            <option value="visa"> Visa</option>
+            <option value="mastercard"> Mastercard</option>
+            <option value="americanexpress"> American Express</option>
+          </select>
+          <h6>Credit Card Number*</h6>
+          <input  ng-class="checkouterror.bilcreditcardnumber" type="text" ng-model="orderdata.bilcreditcardnumber" value="">
+          <h6>Expiration Date*</h6>
+          <select  ng-class="checkouterror.bilexpmonth" class="" ng-model="orderdata.bilexpmonth">
+            <option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option>
+            <option value="08">08 </option> <option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
+          </select>
+          <select  ng-class="checkouterror.bilexpyear" class="" ng-model="orderdata.bilexpyear">
+            <option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option>
+          </select>
+          <h6>Card Verification Number</h6>
+          <input  ng-class="checkouterror.bilcvv" type="text" class="cvv" ng-model="orderdata.bilcvv" value="">
+        </div>
+        <input type="button"  ng-click="continuestep2()" class="continuebut" value="Continue">
+      </form>
+    </div>
+
+
+    <!-- THIRD AND LAST STEP REV AND CONFIRMATION  -->
+    <h5 class="clearfix"><div class="checkstep">3</div><span>Order Review</span></h5>
+    <div class="oreview clearfix"  ng-show="checkoutpage == 3">
+      <table style="width:100%">
+        <tr>
+          <th>Product Name</th>
+          <th>Subtotal</th>
+          <th>Price</th>
+          <th>Qty</th>
+        </tr>
+        <tr ng-repeat="i in getShopCart">
+          <td>{{i.artist}} - {{i.name}}</td>
+          <td>${{i.quantity*i.price}}</td>
+          <td>{{i.quantity}}</td>
+          <td>${{i.price}}</td>
+        </tr>
+        <tr>
+          <th class="totalfield">Total</th>
+          <th class="carttotal">${{cartTotal}}</th>
+        </tr>
+      </table>
+      <div class="placeorderbox">
+        <span>Forgot an item?<a ui-sref="mainpage.home">Edit your cart</a></span>
+        <input type="button"  ng-click="continuestep3()" class="continuebut" value="Place Order">
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <h4>Your Checkout Progress</h4>
+    <h5>Biling Information <a ng-click="changebil()" class="hoveroverit">Change</a></h5>
+    <p>{{username}} <span ng-show="orderdata.biladdress">{{orderdata.biladdress}}<br></span><span ng-show="orderdata.bilcity">{{orderdata.bilcity}}, </span><span ng-show="orderdata.bilzip">{{orderdata.bilzip}}<br></span><span ng-show="orderdata.bilphone"> Tel: {{orderdata.bilphone}}<br></span>
+    <h5>Payment Method <a ng-show="checkoutpage == 3 || checkoutpage == 2" ng-click="changepay()" class="hoveroverit">Change</a></h5>
+    <p ng-show="orderdata.bilpayment == 'checkormoneyorder' || orderdata.bilpayment == 'creditcard'"> <span ng-show="orderdata.bilpayment == 'checkormoneyorder'">Check / Money Order<br></span><span ng-show="orderdata.bilpayment == 'creditcard'">Credit Card<br></span><span ng-show="orderdata.bilcreditcardtype">Credit Card Type: <br>{{orderdata.bilcreditcardtype}}<br></span><span ng-show="orderdata.bilcreditcardnumber">Credit Card Number: <br>{{orderdata.bilcreditcardnumber}}<br></span><span ng-show="orderdata.bilnameoncard">Name on the Card: <br>{{orderdata.bilnameoncard}}</span></p>
+  </div>
+</div>
+
+<!-- LOADING ANIMATION  -->
+  <div ng-show="loading" class="loading">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>

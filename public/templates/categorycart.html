@@ -1,0 +1,39 @@
+
+  <ul><!-- CATEGORIES LIST  -->
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'alternative'})">Alternative</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'blues'})">Blues</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'box sets'})">Box Sets</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'classical'})">Classical</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'country'})">Country</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'electronica'})">Electronica</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'jazz'})">Jazz</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'rock pop'})">Rock-pop</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'rnb'})">RnB</li>
+    <li ui-sref-active="activegenre" ui-sref="mainpage.genre({genre: 'rap'})">Rap</li>
+  </ul>
+
+  <!-- MY CART  -->
+  <div class="mycart" ng-show="getShopCart.length != 0 && getShopCart != null">
+    <h3>My Cart</h3>
+    <h5 class="cartmessage">There are <b>{{cartQty}} items</b> in your cart</h5>
+    <div class="restofcart">
+      <h5 class="cartsubtotal">Cart Subtotal:  <b>${{cartTotal}}</b></h5>
+      <button ui-sref="checkoutpage" class="chkoutbutton">Checkout</button>
+      <h4>RECENTLY ADDED ITEM(S)</h4>
+      <ul>
+        <li  ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" ng-repeat="i in getShopCart" class="clearfix">
+          <div ng-click="deletefromcart(i._id)" class="deleteicon hoveroverit">x</div>
+          <img ng-src="{{i.image}}">
+          <p class="itemscartinfobox">
+            <span>{{i.artist}} - {{i.name}}</span></br>
+            <span>{{i.quantity}} X ${{i.price}}</span>
+          </p>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="mycart" ng-show="getShopCart == 0 || getShopCart == null">
+    <h3>My Cart</h3>
+    <h5 class="cartmessage">You have no items in your shopping cart</h5>
+  </div>

@@ -1,0 +1,45 @@
+
+  <!-- All Links in the upper part of the Nav Bar -->
+      <div class="navbar container-fluid uppernav row col-sm-offset-1 col-sm-10">
+        <a ui-sref="mainpage.home">Home</a>
+        <a ng-show="loggedin" ui-sref="">My Account</a>
+        <a ui-sref="wishlistpage">My Wishlist</a>
+        <a ui-sref="checkoutpage">Checkout</a>
+        <a ng-show="loggedin == false" ui-sref="loginpage">Log In</a>
+        <a ng-show="loggedin == true" ng-click="logout()">Log Out</a>
+      </div>
+
+
+  <!-- The bottom part of the nav bar-->
+  <nav class="redbottomnavctr col-sm-12 clearfix">
+    <div class="col-sm-offset-1 redbottomnav col-sm-10">
+      <!-- Logo-->
+      <span ui-sref="mainpage.home" class="musiclogo hoveroverit col-sm-3">MUSIC</span>
+      <!--Search Bar-->
+      <div class="searcharea col-sm-offset-1 col-sm-4">
+        <input type="text" placeholder=" Search Album or Artist" id="navsearch" ng-model="navsearch" ng-change="getnavresults()" class="input-medium search-query">
+        <ul class="searchdropdown" ng-show="navsearch">
+          <li ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" ng-repeat="i in navalbums" class="hoveroverit searchresult clearfix">
+            <img ng-src="{{i.image}}" >
+            <div class="resulttxtbox">
+              <h4>{{ i.name }}</h4>
+              <h6>{{ i.artist }}</h6>
+              <h6>Released {{ i.year }}</h6>
+            </div>
+          </li>
+          <li ng-show="navalbums.length == 0 && navsearch.length >= 3" class="clearfix">
+            <h4>Nothing to show..</h4>
+          </li>
+          <li ng-show="navsearch.length < 3" class="clearfix">
+            <h4>Type more than 3 letters..</h4>
+          </li>
+
+        </ul>
+      </div>
+      <!-- Cart & Welcome-->
+      <div class="navcartarea col-sm-offset-1 col-sm-3">
+        <span class="navcartslogan">Welcome to Our Online Store!</span>
+        <div ui-sref="checkoutpage" class="navcartlogo hoveroverit">{{getCart}}</div>
+      </div>
+    </div>
+  </nav>

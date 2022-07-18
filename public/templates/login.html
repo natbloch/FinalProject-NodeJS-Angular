@@ -1,0 +1,53 @@
+<div class="loginpage row ">
+  <h3 class="loginpagetitle">Login or Create an Account</h3>
+
+  <!-- CREATE ACCOUNT BOX  -->
+  <div class="newcustbox col-sm-6">
+    <h5>NEW CUSTOMERS</h5>
+    <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+    <input type="button" ng-click="openmodal()" value="Create an Account" data-toggle="modal">
+  </div>
+
+  <!-- REGISTER BOX  -->
+  <div class="regcustbox col-sm-6">
+    <h5>REGISTERED CUSTOMERS</h5>
+    <h6>If you have an account with us, please log in.</h6>
+    <span>Email Address*</span>
+    <input type="email" ng-model="logindata.email" ng-class="loginerror.email" value="">
+    <span>Password*</span>
+    <input type="password" ng-model="logindata.pswd" ng-class="loginerror.pswd" value="">
+    <div><input type="button" ng-click="loginuser()" value="Login"><span>*Required Fields</span></div>
+  </div>
+  </div>
+
+<!-- REGISTER MODAL WITH INFO  -->
+  <div id="registermodal" style="display:block;" ng-show="showmodal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span ng-click="closemodal()" class="close">×</span>
+          <h4 class="modal-title">Registration</h4>
+        </div>
+        <div class="modal-body">
+          <h5>Profile Informations</h5>
+          <input type="text" ng-model="regisdata.fname" placeholder="First Name" value="">
+          <h6 ng-show="regerror.fname">First name is required!</h6>
+          <input type="text" ng-model="regisdata.lname" placeholder="Last Name" value="">
+          <h6 ng-show="regerror.lname">Last name is required!</h6>
+          <h5>Login Datas</h5>
+          <input type="email" ng-model="regisdata.email" placeholder="E-mail address" value="">
+          <h6 ng-show="regerror.email">E-mail address is required!</h6>
+          <input type="password" ng-model="regisdata.pswd" placeholder="Password" value="">
+          <h6 ng-show="regerror.pswd">Password is required!</h6>
+          <input type="password" ng-model="regisdata.pswdconf" placeholder="Password confirmation" value="">
+          <input type="button" ng-click="registeruser()" value="Register">
+        </div>
+      </div>
+</div>
+
+<!-- LOADING ANIMATION  -->
+  <div ng-show="loading" class="loading">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>

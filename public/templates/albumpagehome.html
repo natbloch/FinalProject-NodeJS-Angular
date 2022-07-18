@@ -1,0 +1,14 @@
+<div class="albumslistdisplay">
+  <h2>New Products</h2>
+<!-- ALBUM LIST  -->
+  <div ng-repeat="i in albumdata | limitTo:12:9" class="eachsmallbanner">
+    <img class="hoveroverit" ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" ng-src="{{i.image}}">
+    <div class="albumimgtextarea">
+      <h4>{{i.artist}} - {{i.name}}</h4>
+      <p>${{i.price}}<span class="carticon" ng-click="addonetocart(i)"></span><span ui-sref="mainpage.info({id: '{{i._id}}', genre: '{{i.genre}}', albumname: '{{i.name}}'})" class="infoicon"></span></p>
+    </div>
+  </div>
+
+
+
+</div>

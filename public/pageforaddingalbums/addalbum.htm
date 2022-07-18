@@ -1,0 +1,35 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Album (not part of the website)</title>
+  </head>
+  <body>
+    <form method="POST" action="/albums/new" enctype="multipart/form-data">
+    Select image to upload:
+    image<input type="file" name="image"></br>
+    name <input type="text" name="name"></br>
+    artist<input type="text" name="artist"></br>
+    <select name="genre">
+      <option value="alternative">alternative</option>
+      <option value="blues">blues</option>
+      <option value="box sets">box sets</option>
+      <option value="classical">classical</option>
+      <option value="country">country</option>
+      <option value="heavy metal">heavymetal</option>
+      <option value="jazz">jazz</option>
+      <option value="rock pop">rock pop</option>
+      <option value="electronica">electronica</option>
+      <option value="rnb">rnb</option>
+      <option value="rap">rap</option>
+    </select></br>
+    description<input type="text" name="description"></br>
+    details<input type="text" name="details"></br>
+    year<input type="number" name="year"></br>
+    price $<input type="number" name="price"></br>
+    availability<input type="number" name="availability"></br>
+    <input type="submit" value="submit" name="submit">
+    </form>
+
+  </body>
+</html>
